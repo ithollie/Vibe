@@ -1,0 +1,269 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Todolist</title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/todolist.css')}}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+margin: 0;
+min-width: 210px;
+}
+#wrapper{
+  margin:auto;
+  width:30%;
+  height:100%;
+  background-color:;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+margin: 0;
+padding: 0;
+}
+
+/* Style the list items */
+ul li {
+cursor: pointer;
+position: relative;
+padding: 12px 8px 12px 40px;
+list-style-type: none;
+background: #eee;
+font-size: 18px;
+transition: 0.2s;
+
+/* make the list items unselectable */
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+background: #888;
+color: #fff;
+text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+content: '';
+position: absolute;
+border-color: #fff;
+border-style: solid;
+border-width: 0 2px 2px 0;
+top: 10px;
+left: 16px;
+transform: rotate(45deg);
+height: 15px;
+width: 7px;
+}
+
+/* Style the close button */
+.close {
+position: absolute;
+right: 0;
+top: 0;
+padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+background-color: #f44336;
+color: white;
+}
+
+/* Style the header */
+.header {
+background-color:#212F3C;
+padding: 30px 40px;
+color: white;
+text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Style the input */
+input {
+border: none;
+width: 75%;
+padding: 10px;
+float: left;
+font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+padding: 10px;
+width: 25%;
+background: #d9d9d9;
+color: #555;
+float: left;
+text-align: center;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.addBtn:hover {
+background-color: #bbb;
+}
+#my h2{
+  color:white;
+  display: inline;
+  margin: 12%;
+}
+</style>
+
+</head>
+<body>
+  <div id="" style="width:100%;background-color:green; height:10%; position:absolute; top:0px;"></div>
+  <div id="wrapper" style="width:80%; background-color:red; position:absolute;left:10%; top:100px">
+    <div id="" style="width:100%;height:10%;  background-color:yellow">
+      <ul>
+        <div id="">hellow</div>
+        <div id="">hellow</div>
+        <div id="">hellow</div>
+        <div id="">hellow</div>
+      </ul>
+    </div>
+  <div id="my" style="background-color:red;  width:100%;  height:30%"></div>
+<div id="myDIV" class="header" style="width:50%">
+  <div id="" style="width:100%;background-color:green;position:relative; height:10%"></div>
+  <h2 style="float:left">Enter a todo Name</h2>
+  <br />
+  <input type="text" id="todoName" placeholder="name...">
+  <br />
+  <h2 style="float:left">Enter  a todo  Discription</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  
+  <span onclick="cons.newElement()" id="addBtn">Add</span>
+  
+</div>
+<br />
+<div id="myDIV" class="header">
+  <h2 style="float:left">Enter name  to  delete to list</h2>
+  <input type="text" id="deleteInput" placeholder="delete...">
+  <span onclick="cons.deleteEvent()" id="btnDelete">Delete</span>
+</div>
+<br />
+<br />
+<div id="myDIV" class="header">
+  <h2 style="float:left">name</h2>
+  <br />
+  
+
+  <br />
+  <br />
+  
+  
+  <input type="text" id="change" placeholder="todoname...">
+  <span onclick="cons.changeTodoEvent()" id="btnChange">Changetodo</span>
+</div>
+
+<div id="myDIV" class="header">
+  <h2 style="float:left">Enter todo discritpion</h2>
+  <input type="text" id="description" placeholder="description...">
+</div>
+<h1 id="">Recently  add</h1>
+<ul id="myUL">
+  
+</ul>
+
+    
+    <div id="alltodos"></div>
+    <div id="showtodolist" style="height:30%;  width:100%; background-color:#212F3C;">
+     <div id="Ger"></div>
+    </div>
+    <br />
+    <div id="my" style="background-color:#212F3C;  width:100%;  height:30%">
+  
+    <h2 id="" onclick="c.showActive()" >ShowActive</h2>
+    <h2 id="" onclick="c.showCompleted()" >showCompleted</h2>
+    <h2 id="" onclick="c.clearCom()" >clearCompleted</h2>
+    <h2 id="" onclick="c.toggleAll()"> ToggleAll</h2>
+     
+  
+  </div>
+   
+  <main>
+      ===============================
+      <div>
+        <button onclick="c.showTodoList()">
+          Display Todos
+        </button>
+        <button>          
+          Toggle All
+        </button>
+      </div> 
+      ===============================
+      <div>
+        <button>
+          Add Todo
+        </button>
+        <input type="text" placeholder="Type your next task" id="txtAdd">
+      </div>      
+      ===============================
+      <div>
+        <button>
+          Change Todo
+        </button>
+        <input type="text">        
+        <input type="number">
+
+      </div>      
+      ===============================
+      <div>
+        <button id="btnDelete">
+          Delete Todo
+        </button>
+        <input type="text" readonly="true">         
+        <input type="number" id="numDelete">
+       
+      </div>      
+      ===============================
+      <div>
+        <button>
+          Toggle Completed
+        </button>
+        <input type="text" readonly="true">          
+        <input type="number">
+      
+      </div>      
+      ===============================
+    </main>
+    </div>
+</body>
+
+<script src="{{url_for('static', filename='javascript/L.js')}}"></script>
+<script src="{{url_for('static', filename='javascript/main.js')}}"></script>
+<!--<script>-->
+<!--  window.addEventListener(`DOMContentLoaded` ,todolistController.initialize);-->
+<!--</script>-->
+<script>
+window.addEventListener(`DOMContentLoaded` ,c.initialize);
+</script>
+    
+</html

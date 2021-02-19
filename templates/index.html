@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+      <!-- Modal meta -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Modal title -->
+      <title>vibe</title>
+      <!-- Modal Structure -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- Modal stylesheet -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+      <link rel="stylesheet" href="{{url_for('static',filename='css/comments.css')}}">
+      <link rel="stylesheet" href="{{url_for('static',filename='css/pop.css')}}">
+      <link rel="stylesheet" href="{{url_for('static',filename='search/search.css')}}">
+      <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.css')}}">
+
+      <!-- icon-->
+      <link rel="shortcut icon" href="{{ url_for('static', filename='images/images.png') }}">
+      <!-- Modal Materialize -->
+
+      <!-- icon -->
+      <link rel="shortcut icon" href="{{ url_for('static', filename='images/images.png') }}">
+
+      <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Modal media jquery -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    	
+      <!-- Modal media queries -->
+      <link rel='stylesheet' media='screen and (min-width: 164px) and (max-width: 900px)' href="{{url_for('static',filename='css/convert.css')}}" />
+      <link rel="stylesheet" media='screen and (min-width: 163px) and (max-width: 482px)' href="{{url_for('static',filename='css/small.css')}}">
+      <link rel='stylesheet' media='screen and (min-width: 701px) and (max-width: 900px)' href='css/medium.css' />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+      <!-- Modal javascripts links -->
+      <script src="{{url_for('static', filename='javascript/system.js')}}"></script>
+      <script src="{{url_for('static', filename='javascript/desk1.js')}}"></script>
+      <script src="{{url_for('static', filename='javascript/requests.js')}}"></script>
+      <script src="{{url_for('static', filename='javascript/likes.js')}}"></script>
+      <script src="{{url_for('static', filename='javascript/carasal.js')}}"></script>
+      <script src="{{url_for('static', filename='javascript/pop.js')}}"></script>
+
+  </head>
+
+  <body>
+  <div id="wrapper">
+
+  	  <!-- Modal model -->
+      <div id="modal1" class="modal" tabindex="0">
+
+            <div id="save" style="padding-top: 1px;background-image: url(/static/images/.jpg); background-color:;text-align:center; width:100%; height:7%">
+                  <div id="stt" style="padding-top:0px;width:60%; height:100%; background-color:; text-align:center;margin:auto">
+                            <div class="container" style="background-color:">
+                                <div class="row">
+                                    <div class="Absolute-Center is-Responsive">
+
+                                        <div class="col-sm-12 col-md-10 col-md-offset-1">
+                                            <form id="loginForm" action="/imageupload" method="post" enctype="multipart/form-data">
+                                                <div class="form-group input-group">
+                                                    <span style="color:white" class="input-group-addon"><i class="glyphicon glyphicon-lock">select image</i></span>
+                                                    <input style="width:100%; border-radius: 0px;padding-left:12px;background-color:white" class="form-control" type="text" cols="80" name="text">
+                                                    <input style="width:100%; border-radius: 0px;padding-left:12px;background-color:white" class="form-control" type="file" cols="80" name="file">
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-def btn-block">Submit</button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+              </div>
+
+        </div>
+      <div id="modal2" class="modal open" tabindex="0" style="z-index: 1003; display:none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+                <div id="state" style="padding-top: 1px;background-image: url(/static/images/.jpg); background-color:;text-align:center; width:100%; height:100%">
+                  <div id="stt" style="padding-top: 5px;width:60%; height:100%; background-color:; text-align:center;margin:auto">
+                            <div class="container" style="background-color:">
+                                <div class="row">
+                                    <div class="Absolute-Center is-Responsive">
+
+                                        <div class="col-sm-12 col-md-10 col-md-offset-1">
+                                            <form id="loginForm" action="/picture" method="post" enctype="multipart/form-data">
+                                                <div class="form-group input-group">
+                                                    <span style="color:white" class="input-group-addon"><i class="glyphicon glyphicon-lock">select image</i></span>
+                                                    <input style="width:100%; border-radius: 0px;padding-left:12px;background-color:white" class="form-control" type="file" cols="80" name="file">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-def btn-block">Submit</button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                   </div>
+                </div>
+
+
+        </div>
+
+       <!-- endModal model -->
+      <div  id="header" data-login-name="{{firstname}}" data-login-email="{{email}}" data-login-id="{{id}}" style="  background-position: 100px 5px;  background-size: 150px;text-align:center; background-color:#ffffff !important;background-image: url({{url_for('static', filename='images/ity.jpg')}});background-repeat:no-repeat;background-size:cover;background-position:center;" class="carousel-item red white-text" href="#one!">
+        <div id="notifications" style="width:100%; height:12%;background-color:#ffffff">
+        <div id="te" style="background-color:#ffffff; padding-top:0px;position:relative">
+            <ul>
+                <li><a class="waves-effect waves-light btn #00a5ff" style="width:100px;color:white; text-decoration:none;background-color:#00a5ff" href="">Vibe</a></li>
+                <li id="messages"><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:white; text-decoration:none;background-color:#29343a" href="{{url_for('viewMessage')}}"><i class="material-icons">message</i>{{messageRe}}</a></li>
+                <li id="friends_accepted" ><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:white; text-decoration:none;background-color:#29343a" href="{{url_for('viewFriends')}}"><i class="material-icons">people</i>{{friends}}</a></li>
+
+                <li id="friendRequest" ><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" href="{{url_for('viewRequest')}}"><i class="material-icons">feedback</i>{{requests}}</a></li>
+                <li><a class="waves-effect waves-light btn red"   style="text-transform: lowercase;color:white; text-decoration:none;background-color:red" href="{{url_for('logout')}}">logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- notifications  ends  here -->
+            <div id="" class="inwork" style="margin-top:9px;width:100%; height:20%;background-color:;position:relative;text-align:center">
+
+                                        <div id="te">
+                                            <ul style="text-align:center;">
+                                                    <li><img class=" responsive-img circle" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
+                                                    <li><img class=" responsive-img" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
+                                                    <li><img class=" responsive-img" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
+                                                    <li><img class=" responsive-img" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
+                                                    <li><img class=" responsive-img" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
+                                                    <li><img class=" responsive-img" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
+
+                                            </ul>
+                                        </div>
+           </div>
+
+            <div  id="te" style="background-color:#ffffff; padding-top: 0px;marggin:0px;position:relative">
+            	<ul>
+            			<li><a class="waves-effect waves-light btn #03a9f4" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" href="{{url_for('Blogform')}}">vibe</a></li>
+                        <li><a class="modal-trigger" id="pasue" style="text-transform: lowercase;color:black; text-decoration:none;font-weight: bold;" href="#modal2"><i class=" small material-icons ">add_a_photo</i></a></li>
+            			<li><a class="waves-effect waves-light btn #03a9f4" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" href="{{url_for('Blogform')}}">Myvibe</a></li>
+              </ul>
+  		    </div>
+            <div id="imagess">
+                <img src="static/uploads/{{user['image']}}" alt="" class="responsive-img">
+
+            </div>
+
+            <div  id="te" style="background-color:#ffffff; padding-top: 0px;marggin:0px;position:relative">
+            	<ul>
+            			<li><a class="waves-effect waves-light btn #03a9f4" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" >{{user['firstname']}}</a></li>
+              </ul>
+  		    </div>
+
+      </div>
+
+
+
+    	<div id="stateid" style=" background-size: 150px;padding-top: 1px;background-image: url({{url_for('static', filename='images/.jpg')}}); background-color:white;text-align:center; width:100%; height:35%">
+
+  			    {% block content %}
+  			    {% for posts in blogs %}
+
+        		<div id="contents" data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"style="float:left;width:100%; height:100%; background-color:white; text-align:center;margin:auto; position:relative">
+
+                    <div  id="two" style="height:px" >
+                        <div id="" data-key="{{posts['id']}}" style="width:100%;margin:center; height:5%;background-color:#ffffff">
+                          <ul class="tubs"  >
+                            <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}" id="blogeauthor" data-key="{{posts['id']}}" class="waves-effect waves-light bt" style="margin:9px; color:#907f27; background-color:white"><a style="color:#907f27;font-weight:700; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;" href="{{url_for('author_profile')}}">{{posts['author']}}</a></li>
+                            <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="blogname"    data-key="{{posts['id']}}"  class=" waves-effect waves-light bt "  style="margin:9px; color:#907f27; background-color:white"><a style="color:#907f27;font-weight:700; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;" >{{posts['title']}}</a></li>
+                            <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="blogemail"   data-key="{{posts['id']}}"  class=" waves-effect waves-light bt"  style="margin:9px; color:#907f27; background-color:white" style="color:#907f27; background-color:#11354b"><a style="color:#907f27;font-weight:700; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;">{{posts['email']}}</a></li>
+                          </ul>
+                        </div>
+
+                    </div>
+                    <h1 style="font-size: calc(calc(1.5vw + 1vh) + 0px);">{{posts['title']}}</h1>
+                    <img src="static/uploads/{{posts['img']}}" alt="" class="responsive-img">
+
+                    <div id="title"  data="{{posts['title']}}" style="width:100%;margin:center; height:5%;background-color:">
+            	          <ul id="post-key-post-email" data-key-post-name="{{posts['title']}}" data-key-post-email="{{posts['email']}}" data-key-post-id="{{posts['id']}}">
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="createRequests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}" class="requests waves-effect btn modal-trigger" href="#modal1" style="color:white; background-color:blue"><a style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">mode_comment</i></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="requests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}" class="requests waves-effect  btn  "  style="color:white; background-color:"><a style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">import_export</i></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="comments" data-key-commenter=""  data-key-post="{{posts['id']}}" class="waves-effect   btn modal-trigger" href="#modal1" style="color:red; background-color:"><a style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">comment</i><span id="spcomments">{{posts['numberOfcomments']}}</span></a></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="likes"    data-key-likes=""   data-key-post="{{posts['id']}}" class="waves-effect  btn "  style="color:white; background-color:"><a id="num" style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">thumb_up</i><span id="splikes">{{posts['likes']}}</span></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="dislikes" data-key-dilikes=""  data-key-post="{{posts['id']}}" class="waves-effect  btn"  style="color:white; background-color:"><a id="num" style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">thumb_down</i><span id="spdislikes">{{posts['dislikes']}}</span></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="delete" data-key-delete=""  data-key-post="{{posts['id']}}" class="waves-effect  btn"  style="color:white; background-color:"><a id="num" style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">delete</i><span id="delete"></span></li>
+
+                        </ul>
+                    </div>
+                    <div  id="">
+                        <p style="color:black;font-size:17px;font-weight:500;font-size: calc(calc(1.5vw + 1vh) + 0px);">{{posts['description']}}</p>
+                    </div>
+                    <div parent-data-key-parent="{{posts['title']}}" >
+                        <div id="inputdiv">
+                          <input id="iputss" style="color:black;box-shadow 0.0s, border 0.0s, -webkit-box-shadow 0.0s;font-weight:500; font-size:24px;padding-left:0px;background-color:lightgray;border-bottom: 0px solid white;margin:7px;border-radius:10px; width:" type="text" name="post" placeholder="" required>
+                        </div>
+
+                        <div id="send" style="background-color:white; color:black; lowercase" data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="comments" data-key-commenter=""  data-key-post="{{posts['id']}}" class="send  waves-effect waves-light  btn" >
+                           send
+                        </div>
+
+                    </div>
+
+  		        </div>
+
+  		        {% endfor %}
+                {% endblock %}
+        </div>
+            <footer class="page-footer" style="position:relative;clear: both;background-color:#1c1216">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Mission Statement</h5>
+                <p class="grey-text text-lighten-4">Be Beautiful.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">policy</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">account</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2021 Copyright Vibe inc.
+            </div>
+          </div>
+        </footer>
+  </div>
+<script>
+window.addEventListener(`DOMContentLoaded` ,Controller.initialize);
+window.addEventListener(`DOMContentLoaded`, Objects.object_initialize);
+window.addEventListener(`DOMContentLoaded` ,c.initialize);
+</script>
+
+  </body>
+</html>

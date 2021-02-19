@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>requets</title>
+    	<script src="{{url_for('static', filename='javascript/accepted.js')}}"></script>
+    	
+    	
+</head>
+<body>
+
+ <ul>
+    {% for request in requests %}
+        <li class="acceptRequests" data-key-name="{{request['name']}}" data-key-email="{{request['email']}}" data-key-user_is="{{request['user_id']}}"><a href="">{{request['name']}}</a></li>
+    {% endfor %}
+</ul>
+    
+  
+<h1>viewRequests</h1>
+<script>
+window.addEventListener(`DOMContentLoaded` ,acceptedController.initialize)
+
+</script>
+</body>
+</html>
+
