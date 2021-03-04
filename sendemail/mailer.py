@@ -1,12 +1,15 @@
 import smtplib, ssl
 import email
+import socket
+
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email.utils import COMMASPACE, formatdate
+from flask import Flask
 
 
-class Emails(object):
+class Mail(object):
     def  __init__(self, send_email=None ,receiver=None):
        self.sender_email = send_email
        self.receiver_email = receiver
@@ -16,8 +19,9 @@ class Emails(object):
  
     def __exit__(self, exc_type, exc_val, exc_tb):
         return 
-    
-    def mailer(self):
+
+
+    def sendMail(self):
 
         message = MIMEMultipart("alternative")
         message["Subject"] = "multipart test"
@@ -35,7 +39,7 @@ class Emails(object):
           <body>
             <p>Hi,<br>
                How are you?<br>
-               <a href="http://www.realpython.com">Real Python</a> 
+               <a href="http://127.0.0.1:9000/activate">click here to activate  you account</a> 
                has many great tutorials.
             </p>
           </body>
@@ -54,6 +58,7 @@ class Emails(object):
         # Create secure connection with server and send email
         #context = ssl.create_default_context()
         server = smtplib.SMTP("smtp.gmail.com", 587)
-        server.login("boysthollie@gmail.com", "69414422173943112")
+        server.starttls()
+        server.login("boysthollie@gmail.com", "hawaibrahB1a1@$$$$@@@@####")
         server.sendmail(self.sender_email, self.receiver_email, message.as_string())
         server.quit()

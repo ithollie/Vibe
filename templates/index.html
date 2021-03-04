@@ -47,37 +47,25 @@
 
   <body>
   <div id="wrapper">
+  	  <!-- Modal model starts-->
+      <div id="modal1" class="modal" tabindex="0" style="height:50%; width:100%;text-align:center">
+          <div id="">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/IGOx3nPAV5U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
+          </div>
+          <div id="title"  data="{{posts['title']}}" style="margin:center; height:10%;background-color:#ffffff">
+            	          <ul id="post-key-post-email" data-key-post-name="{{posts['title']}}" data-key-post-email="{{posts['email']}}" data-key-post-id="{{posts['id']}}">
+                              
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="createRequests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}" class="requests waves-effect modal-trigger" href="#modal1" style="color:black; background-color:"><a style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">mode_comment</i></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="requests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}" class="requests waves-effect   "  style="margin:10px;color:black; background-color:"><a style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">import_export</i></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="comments" data-key-commenter=""  data-key-post="{{posts['id']}}" class="waves-effect  modal-trigger" href="#modal1" style="margin:10px;color:red; background-color:"><a style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">comment</i><span id="spcomments">{{posts['numberOfcomments']}}</span></a></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="likes"    data-key-likes=""   data-key-post="{{posts['id']}}" class="waves-effect   "  style="margin:10px;color:black; background-color:"><a id="num" style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">thumb_up</i><span id="splikes">{{posts['likes']}}</span></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="dislikes" data-key-dilikes=""  data-key-post="{{posts['id']}}" class="waves-effect  "  style="margin:10px;color:white; background-color:"><a id="num" style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">thumb_down</i><span id="spdislikes">{{posts['dislikes']}}</span></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="delete" data-key-delete=""  data-key-post="{{posts['id']}}" class="waves-effect  "  style="margin:10px;color:white; background-color:"><a id="num" style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">delete</i><span id="delete"></span></li>
 
-  	  <!-- Modal model -->
-      <div id="modal1" class="modal" tabindex="0">
-
-            <div id="save" style="padding-top: 1px;background-image: url(/static/images/.jpg); background-color:;text-align:center; width:100%; height:7%">
-                  <div id="stt" style="padding-top:0px;width:60%; height:100%; background-color:; text-align:center;margin:auto">
-                            <div class="container" style="background-color:">
-                                <div class="row">
-                                    <div class="Absolute-Center is-Responsive">
-
-                                        <div class="col-sm-12 col-md-10 col-md-offset-1">
-                                            <form id="loginForm" action="/imageupload" method="post" enctype="multipart/form-data">
-                                                <div class="form-group input-group">
-                                                    <span style="color:white" class="input-group-addon"><i class="glyphicon glyphicon-lock">select image</i></span>
-                                                    <input style="width:100%; border-radius: 0px;padding-left:12px;background-color:white" class="form-control" type="text" cols="80" name="text">
-                                                    <input style="width:100%; border-radius: 0px;padding-left:12px;background-color:white" class="form-control" type="file" cols="80" name="file">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-def btn-block">Submit</button>
-                                                </div>
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        </ul>
                     </div>
-              </div>
-
-        </div>
+      </div>
       <div id="modal2" class="modal open" tabindex="0" style="z-index: 1003; display:none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
                 <div id="state" style="padding-top: 1px;background-image: url(/static/images/.jpg); background-color:;text-align:center; width:100%; height:100%">
                   <div id="stt" style="padding-top: 5px;width:60%; height:100%; background-color:; text-align:center;margin:auto">
@@ -89,7 +77,7 @@
                                             <form id="loginForm" action="/picture" method="post" enctype="multipart/form-data">
                                                 <div class="form-group input-group">
                                                     <span style="color:white" class="input-group-addon"><i class="glyphicon glyphicon-lock">select image</i></span>
-                                                    <input style="width:100%; border-radius: 0px;padding-left:12px;background-color:white" class="form-control" type="file" cols="80" name="file">
+                                                    <input style="width:100%; border-radius: 0px;padding-left:12px;background-color:white" class="form-control" type="file" cols="80" name="file" required/>
                                                 </div>
                                                 <div class="form-group">
                                                     <button type="submit" class="btn btn-def btn-block">Submit</button>
@@ -103,29 +91,42 @@
                    </div>
                 </div>
 
-
         </div>
 
        <!-- endModal model -->
-      <div  id="header" data-login-name="{{firstname}}" data-login-email="{{email}}" data-login-id="{{id}}" style="  background-position: 100px 5px;  background-size: 150px;text-align:center; background-color:#ffffff !important;background-image: url({{url_for('static', filename='images/ity.jpg')}});background-repeat:no-repeat;background-size:cover;background-position:center;" class="carousel-item red white-text" href="#one!">
-        <div id="notifications" style="width:100%; height:12%;background-color:#ffffff">
-        <div id="te" style="background-color:#ffffff; padding-top:0px;position:relative">
-            <ul>
-                <li><a class="waves-effect waves-light btn #00a5ff" style="width:100px;color:white; text-decoration:none;background-color:#00a5ff" href="">Vibe</a></li>
-                <li id="messages"><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:white; text-decoration:none;background-color:#29343a" href="{{url_for('viewMessage')}}"><i class="material-icons">message</i>{{messageRe}}</a></li>
-                <li id="friends_accepted" ><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:white; text-decoration:none;background-color:#29343a" href="{{url_for('viewFriends')}}"><i class="material-icons">people</i>{{friends}}</a></li>
+      <div  id="header" data-login-name="{{firstname}}" data-login-email="{{email}}" data-login-id="{{id}}" style="  background-position: 100px 5px;  background-size: 150px;text-align:center; background-color:white !important;background-image: url({{url_for('static', filename='images/ity.jpg')}});background-repeat:no-repeat;background-size:cover;background-position:center;" class="carousel-item red white-text" href="#one!">
 
-                <li id="friendRequest" ><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" href="{{url_for('viewRequest')}}"><i class="material-icons">feedback</i>{{requests}}</a></li>
-                <li><a class="waves-effect waves-light btn red"   style="text-transform: lowercase;color:white; text-decoration:none;background-color:red" href="{{url_for('logout')}}">logout</a></li>
-            </ul>
-          </div>
+          <!--  
+           <a style="font-family: Times, Times New Roman, Georgia, serif;width:100px;text-transform: lowercase;color:white; text-decoration:none;background-color:;" href="">User</a>
+
+                <a style="font-family: Times, Times New Roman, Georgia, serif;width:100px;text-transform: lowercase;color:white; text-decoration:none;background-color:;" href="">Photos</a>
+                <a style="font-family: Times, Times New Roman, Georgia, serif;width:100px;text-transform: ;color:white; text-decoration:none;font-weight:500;background-color:;" href="http://todo-ithollie.c9users.io:8080/welcome">Send</a>
+                <a style="font-family: Times, Times New Roman, Georgia, serif;width:100px;text-transform: ;color:white; text-decoration:none;font-weight:500;background-color:;" href="#about">Pa</a>
+                <a style="font-family: Times, Times New Roman, Georgia, serif;width:100px;text-transform: ;color:white; text-decoration:none;font-weight:500;font-style:bold;background-color:;" href="#contact">Darby</a>
+                <a style="font-family: Times, Times New Roman, Georgia, serif;width:100px;text-transform: ;color:white; text-decoration:none;font-weight:500;background-color:;" href="#contact"><span style="font-size:20px; font-weight:500;font-style:bold">Amount</span></a>
+            
+          -->
+          <div class="topnav" style="background-color:black;padding: 12px;height: 275px;background-image: url({{url_for('static', filename='images/city.jpg')}});background-repeat:no-repeat;background-size:cover;background-position:center;">
+               
+
+            </div>
+          <div id="notifications" style="width:100%; height:12%;background-color:white">
+            <div id="te" style="background-color:white; padding-top:0px;position:relative">
+                <ul>
+                    <li><a class="waves-effect waves-light btn blue" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" href="/blogform">vibe</a></li>                <li id="messages"><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:white; text-decoration:none;background-color:#29343a" href="{{url_for('viewMessage')}}"><i class="material-icons">message</i>{{messageRe}}</a></li>
+                    <li id="friends_accepted" ><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:white; text-decoration:none;background-color:#29343a" href="{{url_for('viewFriends')}}"><i class="material-icons">people</i>{{friends}}</a></li>
+
+                    <li id="friendRequest" ><a class="waves-effect waves-light btn #29343a" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" href="{{url_for('viewRequest')}}"><i class="material-icons">feedback</i>{{requests}}</a></li>
+                    <li><a class="waves-effect waves-light btn red"   style="text-transform: lowercase;color:white; text-decoration:none;background-color:red" href="{{url_for('logout')}}">logout</a></li>
+                </ul>
+              </div>
         </div>
         <!-- notifications  ends  here -->
-            <div id="" class="inwork" style="margin-top:9px;width:100%; height:20%;background-color:;position:relative;text-align:center">
+
+            <div id="" class="inwork" style="margin-top:9px;width:100%; height:20%;background-color:white;position:relative;text-align:center">
 
                                         <div id="te">
                                             <ul style="text-align:center;">
-                                                    <li><img class=" responsive-img circle" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
                                                     <li><img class=" responsive-img" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
                                                     <li><img class=" responsive-img" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
                                                     <li><img class=" responsive-img" style="border-radius:20%;width: 10%;height: 10%;" src="/static/uploads/reg/boys.jpg" alt=""></li>
@@ -136,28 +137,29 @@
                                         </div>
            </div>
 
-            <div  id="te" style="background-color:#ffffff; padding-top: 0px;marggin:0px;position:relative">
+            <div  id="te" style="background-color:white; padding-top: 0px;marggin:0px;position:relative">
             	<ul>
-            			<li><a class="waves-effect waves-light btn #03a9f4" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" href="{{url_for('Blogform')}}">vibe</a></li>
                         <li><a class="modal-trigger" id="pasue" style="text-transform: lowercase;color:black; text-decoration:none;font-weight: bold;" href="#modal2"><i class=" small material-icons ">add_a_photo</i></a></li>
-            			<li><a class="waves-effect waves-light btn #03a9f4" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" href="{{url_for('Blogform')}}">Myvibe</a></li>
               </ul>
   		    </div>
             <div id="imagess">
-                <img src="static/uploads/{{user['image']}}" alt="" class="responsive-img">
+
+                 {% if  user['image'] == "1" %}
+                    <img src="static/uploads/{{user['img']}}" alt="" id="resize"  class="responsive-img" style="border-radius:20px">
+
+                 {% else %}
+                    <img src="{{user['img']}}" alt="" class="responsive-img" style="    border-radius: 20%;">
+                {% endif %}
 
             </div>
 
-            <div  id="te" style="background-color:#ffffff; padding-top: 0px;marggin:0px;position:relative">
+            <div  id="te" style="background-color:white; padding-top: 0px;marggin:0px;position:relative">
             	<ul>
             			<li><a class="waves-effect waves-light btn #03a9f4" style="text-transform: lowercase;color:; text-decoration:none;background-color:#29343a" >{{user['firstname']}}</a></li>
               </ul>
   		    </div>
 
       </div>
-
-
-
     	<div id="stateid" style=" background-size: 150px;padding-top: 1px;background-image: url({{url_for('static', filename='images/.jpg')}}); background-color:white;text-align:center; width:100%; height:35%">
 
   			    {% block content %}
@@ -176,29 +178,67 @@
 
                     </div>
                     <h1 style="font-size: calc(calc(1.5vw + 1vh) + 0px);">{{posts['title']}}</h1>
-                    <img src="static/uploads/{{posts['img']}}" alt="" class="responsive-img">
+                    <img id="psot_img"  src="static/uploads/{{posts['img']}}" alt="" class="responsive-img">
 
-                    <div id="title"  data="{{posts['title']}}" style="width:100%;margin:center; height:5%;background-color:">
+                    
+                    <div  id="description">
+                        <p style="text-align:left;color:black;font-weight:500;margin-bottom: 15px;
+                                 font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+                              font-weight: 300;
+                              -webkit-font-smoothing: antialiased;
+                              font-size: 1.2rem;
+                              line-height: 1.66667;">
+                            {{posts['description']}}
+                        </p>
+                    </div>
+                    <div id="yvido" style="display:none">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/Fl44DM1EihM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div id="title"  data="{{posts['title']}}" style="margin:center; height:10%;background-color:#ffffff">
             	          <ul id="post-key-post-email" data-key-post-name="{{posts['title']}}" data-key-post-email="{{posts['email']}}" data-key-post-id="{{posts['id']}}">
-                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="createRequests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}" class="requests waves-effect btn modal-trigger" href="#modal1" style="color:white; background-color:blue"><a style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">mode_comment</i></li>
-                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="requests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}" class="requests waves-effect  btn  "  style="color:white; background-color:"><a style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">import_export</i></li>
-                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="comments" data-key-commenter=""  data-key-post="{{posts['id']}}" class="waves-effect   btn modal-trigger" href="#modal1" style="color:red; background-color:"><a style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">comment</i><span id="spcomments">{{posts['numberOfcomments']}}</span></a></li>
-                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="likes"    data-key-likes=""   data-key-post="{{posts['id']}}" class="waves-effect  btn "  style="color:white; background-color:"><a id="num" style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">thumb_up</i><span id="splikes">{{posts['likes']}}</span></li>
-                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="dislikes" data-key-dilikes=""  data-key-post="{{posts['id']}}" class="waves-effect  btn"  style="color:white; background-color:"><a id="num" style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">thumb_down</i><span id="spdislikes">{{posts['dislikes']}}</span></li>
-                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="delete" data-key-delete=""  data-key-post="{{posts['id']}}" class="waves-effect  btn"  style="color:white; background-color:"><a id="num" style="color:white; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">delete</i><span id="delete"></span></li>
+                              
+                              <li id="cvideo" data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="createRequests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}"   class="requests waves-effect  btn  " href="#modal1" style="color:; background-color:"><a style="color:green; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;">Cvideo</li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="createRequests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}" class="requests waves-effect modal-trigger" href="#modal1" style="color:black; background-color:"><a style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">mode_comment</i></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="requests" data-key-receiver="{{posts['id']}}" data-key-post="{{posts['id']}}" class="requests waves-effect   "  style="margin:10px;color:black; background-color:"><a style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">import_export</i></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="comments" data-key-commenter=""  data-key-post="{{posts['id']}}" class="waves-effect  modal-trigger" href="#modal1" style="margin:10px;color:red; background-color:"><a style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">comment</i><span id="spcomments">{{posts['numberOfcomments']}}</span></a></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="likes"    data-key-likes=""   data-key-post="{{posts['id']}}" class="waves-effect   "  style="margin:10px;color:black; background-color:"><a id="num" style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">thumb_up</i><span id="splikes">{{posts['likes']}}</span></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="dislikes" data-key-dilikes=""  data-key-post="{{posts['id']}}" class="waves-effect  "  style="margin:10px;color:white; background-color:"><a id="num" style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">thumb_down</i><span id="spdislikes">{{posts['dislikes']}}</span></li>
+                              <li data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="delete" data-key-delete=""  data-key-post="{{posts['id']}}" class="waves-effect  "  style="margin:10px;color:white; background-color:"><a id="num" style="color:black; text-decoration:none; font-size:calc(calc(0.5vw + 1vh) + 0px); text-transform: lowercase;"><i class="material-icons">delete</i><span id="delete"></span></li>
 
                         </ul>
                     </div>
-                    <div  id="">
-                        <p style="color:black;font-size:17px;font-weight:500;font-size: calc(calc(1.5vw + 1vh) + 0px);">{{posts['description']}}</p>
+                    <div id="com">
+                       <ul>
+                        <li style="text-align:left;color:black;font-weight:500;margin-bottom: 15px;
+                                 font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+                              font-weight: 300;
+                              -webkit-font-smoothing: antialiased;
+                             
+                              font-size: 1.2rem;
+                              line-height: 1.66667;"> as the army crafts its next budget, its chief of staff said wednesday he will ensure every dollar c</li>
+                        <li style="text-align:left;color:black;font-weight:500;margin-bottom: 15px;
+                                 font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+                              font-weight: 300;
+                              -webkit-font-smoothing: antialiased;
+                             
+                              font-size: 1.2rem;
+                              line-height: 1.66667;"> as the army crafts its next budget, its chief of staff said wednesday he will ensure every dollar c</li>
+                        <li style="text-align:left;color:black;font-weight:500;margin-bottom: 15px;
+                                 font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+                              font-weight: 300;
+                              -webkit-font-smoothing: antialiased;
+                           
+                              font-size: 1.2rem;
+                              line-height: 1.66667;"> as the army crafts its next budget, its chief of staff said wednesday he will ensure every dollar c</li>
+                       </ul>
                     </div>
                     <div parent-data-key-parent="{{posts['title']}}" >
                         <div id="inputdiv">
-                          <input id="iputss" style="color:black;box-shadow 0.0s, border 0.0s, -webkit-box-shadow 0.0s;font-weight:500; font-size:24px;padding-left:0px;background-color:lightgray;border-bottom: 0px solid white;margin:7px;border-radius:10px; width:" type="text" name="post" placeholder="" required>
+                          <input id="iputss" style="width: 240px;color:black;box-shadow 0.0s, border 0.0s, -webkit-box-shadow 0.0s;font-weight:500; font-size:24px;padding-left:0px;background-color:lightgray;border-bottom: 0px solid white;margin:7px;border-radius:10px; width:" type="text" name="post" placeholder="" required>
                         </div>
 
                         <div id="send" style="background-color:white; color:black; lowercase" data-key-author="{{posts['author']}}" data-key-name="{{posts['title']}}" data-key-email="{{posts['email']}}" data-key-id="{{posts['id']}}"id="comments" data-key-commenter=""  data-key-post="{{posts['id']}}" class="send  waves-effect waves-light  btn" >
-                           send
+                           post
                         </div>
 
                     </div>
@@ -217,16 +257,34 @@
               </div>
               <div class="col l4 offset-l2 s12">
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">policy</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">account</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!" style="text-align:left;color:black;font-weight:500;margin-bottom: 15px;
+                                 font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+                              font-weight: 300;
+                              -webkit-font-smoothing: antialiased;
+                             
+                              font-size: 1.2rem;
+                              line-height: 1.66667;">policy</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!" style="text-align:left;color:black;font-weight:500;margin-bottom: 15px;
+                                 font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+                              font-weight: 300;
+                              -webkit-font-smoothing: antialiased;
+                             
+                              font-size: 1.2rem;
+                              line-height: 1.66667;">account</a></li>
 
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
-            <div class="container">
-            © 2021 Copyright Vibe inc.
+            <div class="container" style="text-align:left;color:black;font-weight:500;margin-bottom: 15px;
+                                 font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+                              font-weight: 300;
+                              -webkit-font-smoothing: antialiased;
+                             
+                              font-size: 1.2rem;
+                              line-height: 1.66667;">
+            © 2021 Copyright Vibe LLC.
             </div>
           </div>
         </footer>

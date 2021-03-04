@@ -10,9 +10,10 @@ html, body{
   padding:0px;
   margin:0px;
   overflow-x:hidden;
-  background-color:white;
+  background-color:gray;
   
 }
+
 body{
   overflow-y:hidden;
 }
@@ -30,8 +31,9 @@ body{
 
 }
 .btn{
-  #padding:0px;
+  padding:0px;
 }
+
 #inputss{
   width:50%;
 }
@@ -153,8 +155,7 @@ ruled {
     border: 0;
 }
 #wrapper{
-  background-color:#ffffff;
-  color:$color;
+  background-color:gray;
   width:70%;
   height:auto;
   margin:auto;
@@ -201,7 +202,7 @@ ruled {
   width:75%;
   background-color:red;
   margin:auto;
-  display:block;
+  display:none;
 }
 .flow-text {
     font-size: 1.68rem;
@@ -210,8 +211,8 @@ ruled {
 }
 img.responsive-img, video.responsive-video {
     padding: 7px;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 400px;
 }
 
 #titleText{

@@ -5,7 +5,7 @@ from  models import constants as UserConstants
 from models.System_file import File_system
 import  models.user.error as UserErrors
 from common.Utils import utils
-from sendemail.eul import Emails
+from sendemail.mailer import Mail
 import datetime
 import uuid
 import os
@@ -166,7 +166,6 @@ class Request(object):
 			"buttonstate":self.buttonstate,
 			"accept":self.accept,
 			"count":self.count,
-		
 			"collection":self.collection,
 			"_id":self._id,
 		    "date":self.date,

@@ -6,7 +6,7 @@ from  models import constants as UserConstants
 from models.System_file import File_system
 import  models.user.error as UserErrors
 from common.Utils import utils
-from sendemail.eul import Emails
+from sendemail.mailer import Mail
 import datetime
 import uuid
 import os
@@ -56,6 +56,7 @@ class Users(object):
 		 	for file in os.listdir(file):
 		 		if file == blog['img']:
 		 			return False
+
 	@classmethod
 	def get_by_email(cls,email):
 			data = Database.find_one(UserConstants.COLLECTION, {"email":email})
@@ -64,6 +65,24 @@ class Users(object):
 				return True
 			else:
 				return False
+
+	@staticmethod
+	def get_by_active(email):
+		data = Database.find_one(UserConstants.COLLECTION, {"email": email})
+		if data["active"]  == "0":
+			return  True
+		else:
+			return False
+
+	@staticmethod
+	def get_by_password(email, password):
+		data = Database.find_one(UserConstants.COLLECTION, {"email": email})
+		if  utils.check_hash_password(password, data['password']) is not None:
+			return True
+		else:
+			return False
+
+	# raise UserErrors.InvalideEmailError("invalid user")
 	@classmethod
 	def get_by_name(cls,email):
 			data = Database.find_one(UserConstants.COLLECTION, {"email":email})
@@ -162,10 +181,10 @@ class Users(object):
 				#raise UserErrors.InvalideEmailError("invalid user")
     
 	@classmethod
-	def registration(cls, firstname, lastname , email,password,img_user,image):
-		if cls.get_by_email(email) == False:
+	def registration(cls, firstname, lastname, email, password, imagename, image):
+		if not cls.get_by_email(email):
 			utils.email_is_valid(email)
-			new_user = cls(firstname,lastname,email,utils.hash_password(password), img_user,image)
+			new_user = cls(firstname, lastname, email, utils.hash_password(password), imagename, image)
 			new_user.save_to_mongo()
 			session['email'] = email
 			return True
@@ -217,7 +236,8 @@ class Users(object):
 	def update_image(cls, email=None, image=None):
 		if email  is  not None and  image  is not None:
 			print("hello  wow")
-			Database.updates("user",{"email":email},{"$set": {"image":image}})
+			Database.updates("user",{"email":email}, {"$set":{"image":"1"}})
+			Database.updates("user",{"email":email},{"$set": {"img":image}})
  
 	@classmethod
 	def  save_image(cls ,email , image):
@@ -228,8 +248,7 @@ class Users(object):
 			cls.update_image(email, image)
 		else:
 			print("Image can not be inserted")
-			
-    
+
 	def json(self):
 		return {
 			"firstname":self.firstname,
@@ -237,7 +256,8 @@ class Users(object):
 			"email":self.email,
 			"password":self.password,
 			"_id":self._id,
-			"image":self.image,
+			"active":0,
+			"image":0,
 			"youtube":self.youtube,
 			"img":self.img,
 			"date":self.date

@@ -14,7 +14,10 @@ Controller.initialize  =  function(eventObject){
   View.commentfirst = document.getElementById("fname");
   View.commentlast  = document.getElementById("lname");
   View.commentSubject = document.getElementById("suject");
-
+  View.loginsubmit    = document.getElementById("login");
+  View.cvideo         = document.getElementById("cvideo");
+  View.yvido           = document.getElementById("yvido");
+  View.psot_img        = document.getElementById("psot_img");
   View.subject  = document.getElementById("subject");
   View.comdiv =   document.getElementById("comdiv");
   View.likes =    document.getElementById("likes");
@@ -38,6 +41,8 @@ Controller.initialize  =  function(eventObject){
   View.tubs  = document.querySelectorAll(".tub");
  
  View.comments.addEventListener('click',Controller.comments);
+ View.cvideo.addEventListener('click', Controller.cvideo);
+ //View.loginsubmit.addEventListener('click',Controller.login);
 //  View.insertComments.addEventListener('click', Controller.insertComment);
  
  
@@ -72,6 +77,15 @@ Controller.initialize  =  function(eventObject){
   
   
 }
+Controller.cvideo = function(event){
+    console.log("cvideo  has been  clicked");
+    View.yvido.style.display = "block";
+    View.psot_img.style.display = "none";
+}
+Controller.login = function(event){
+    console.log("submit button  has been  click");
+}
+
 Controller.change  = function(title,number){
 	View.titles.forEach(likes=>{
 		if(likes.childNodes[1].childNodes[5].attributes[1].value ==  title){
