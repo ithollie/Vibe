@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Ibrahim Alpha Thollie">
+<title>Vme</title>
+<link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/stylel.css')}}">
+<link rel='stylesheet' media='screen and (min-width: 164px) and (max-width: 900px)' href="{{url_for('static',filename='css/convert.css')}}" />
+<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/materialize.min.css')}}"  media="screen,projection"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/images.png') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{url_for('static', filename='javascript/ajax.js')}}"></script>
+</head>
+<body style="background-image: url({{url_for('static', filename='images/ogin.jpg')}})">
+	<div id="titlelogins" style="width:100%; height:10%;background-color:#313146">
+	  <div id="" style="float:right">
+			{% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul style="background-color:">
+              {% for message in messages %}
+                <li style="font-family: Times, Times New Roman, Georgia, serif;color:white;font-size:calc(calc(1vw + 1vh) + 0px);  font-weight:700">{{ message }}</li>
+              {% endfor %}
+            </ul>
+          	{% endif %}
+      		{% endwith %}
+    		{% block body %}{% endblock %}
+    		</div>
+    			<div id="" style="float:right;width:100%; height:6%; background-color:;  text-align:center">
+			      <h1 id="pop" style="color:white;margin: 0px;font-size:calc(calc(1vw + 1vh) + 0px); font-weight:400">{{message}}</h1>
+          </div>
+	  <h1 style="float: left;width: 10%;margin: auto;padding-top:11px;text-align:center;background-color:; font-size:42px; font-weight:700;color:white">Vme</h1>
+	</div>
+	<div id="wrapper" style="background-color:">
+		<div id="state" style="padding-top: 1px;background-image: url({{url_for('static', filename='images/.jpg')}}); background-color:;text-align:center; width:100%; height:100%">
+			<div id="stt" style="padding-top: 5px;width:60%; height:100%; background-color:; text-align:center;margin:auto">
+				<div class="container" style="background-color:red">
+          <div class="row">
+            <div class="Absolute-Center is-Responsive">
+              
+              <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <form  id="loginForm"  action="{{url_for('login_process')}}" method="post" role="form">
+                  <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="email" style="font-size:24px;border-radius: 10px;padding-left:12px;background-color:#372727" class="form-control" type="text" name="email" placeholder="email" required/>
+                  </div>
+                  <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" style="border-radius: 10px;font-size:24px;padding-left:12px;background-color:#372727" class="form-control" type="password" name="password" placeholder="password" required/>
+                  </div>
+                  
+                  <div class="checkbox">
+                    <label>
+                       <a href="{{url_for('admin_login')}}">Login as  an ADMIN</a>
+                    </label>
+                  </div>
+                  <div class="form-group" style="background-color:green">
+                    <button style="background-color:green" type="submit" class="btnlogin btn btn-def btn-block">login</button>
+                  </div>
+                  <div class="form-group text-center">
+                    <a href="{{url_for('changePassword')}}">Forgot Password</a>&nbsp;|&nbsp;<a href="#">Support</a>|&nbsp;<a href="{{url_for('register')}}">signup</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>		
+			
+			</div>
+			
+</div>
+<script>
+window.addEventListener(`DOMContentLoaded` ,cs.initialize);
+
+</script>
+</body>
+</html>

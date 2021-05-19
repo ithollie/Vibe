@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/materialize.min.css')}}"  media="screen,projection"/>
+<link rel="stylesheet" href="{{url_for('static',filename='css/stylel.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<script src="{{url_for('static', filename='javascript/system.js')}}"></script>
+
+</head>
+<body style="background-image: url({{url_for('static', filename='images/login.jpg')}})">
+	<div id="titlelogin" style="width:100%; height:10%;background-color:#313146">
+    
+	  <h1 style="float: left;width: 10%;margin: auto;padding-top:11px;text-align:center;background-color:; font-size:42px; font-weight:700;color:white">
+      Finna
+    </h1>
+    <div id="" style="float:right">
+			{% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul style="background-color:">
+              {% for message in messages %}
+                <li style="font-family: Times, Times New Roman, Georgia, serif;color:white;font-size:calc(calc(1vw + 1vh) + 0px);  font-weight:700">{{ message }}</li>
+              {% endfor %}
+            </ul>
+          	{% endif %}
+      		{% endwith %}
+    		{% block body %}{% endblock %}
+    		
+    		</div>
+	</div>
+
+	<div id="wrapper">
+		
+		
+		<div id="" style="width:100%; height:6%; background-color:;  text-align:center">
+			<h1 style="    margin: 0px;font-size:calc(calc(1.2vw + 1vh) + 0px);color:white; font-weight:200">{{message}}</h1>
+		</div>
+		<div id="state" style="position: absolute;padding-top: 12px;background-image: url({{url_for('static', filename='images/.jpg')}}); background-color:;text-align:center; width:100%; height:90%">
+			<div id="stt" style="padding-top: 5px;width:60%; height:100%; background-color:; text-align:center;margin:auto">
+	<div class="container">
+  <div class="row">
+    <div class="Absolute-Center is-Responsive">
+      <!-- <div id="logo-container"></div> -->
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <form  id="loginForm" action="{{url_for('register_process')}}" method="post" enctype ="multipart/form-data">
+          <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input style="background-color:#372727;  color:white; font-size:24px" class="form-control" type="text" name="firstname" placeholder="Firstname" required/>
+          </div>
+          <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input style="background-color:#372727;color:white;font-size:24px"  class="form-control" type="text" name="lastname" placeholder="Lastname" required/>
+          </div>
+          <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input style="background-color:#372727;color:white; font-size:24px" class="form-control" type="text" name="email" placeholder="email" required/>
+          </div>
+          <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input style="background-color:#372727;color:white;font-size:24px" class="form-control" type="password" name="password" placeholder="password" required/>
+          </div>
+          <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input style="background-color:#372727;color:white;font-size:24px" class="form-control" type="password" name="confirm" placeholder="confirm password" required/>
+          </div>
+          <div class="form-group input-group">
+                <span style="color:white" class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input style="width:30%; border-radius: 0px;padding-left:12px;background-color:white" class="form-control" type="file" cols="80" name="file"  />
+          </div>
+          <div class="checkbox">
+            <label>
+              <input style="background-color:#372727;color:white;font-size:24px" type="checkbox"> I agree to the <a href="#">Terms and Conditions</a>
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-def btn-block">Submit</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+			</div>		
+			
+			
+			</div>
+			
+			
+		
+
+		
+	    
+
+</div>
+<script>
+window.addEventListener(`DOMContentLoaded` ,c.initialize);
+window.addEventListener(`DOMContentLoaded` ,mainPage.main);
+</script>
+</body>
+</html>

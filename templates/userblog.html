@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Blog</title>
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	
+    <!-- Compiled and minified JavaScript -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+<script src="{{url_for('static', filename='javascript/system.js')}}"></script>
+<!--<script src="{{url_for('static', filename='javascript/jq.js')}}"></script>-->
+
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="modal1" class="modal modal-fixed-footer">
+    
+    
+  </div>
+		<div id="header" style="background-image: url({{url_for('static', filename='images/wo.jpg')}});background-color:">
+			
+				<!--<h1 style="font-size:calc(calc(1.2vw + 1vh) + 0px);color:white">The United States Of America</h1>-->
+				<nav style="width:50%; margin:auto; padding:10px">
+			    <div class="nav-wrapper">
+			      <form>
+			        <div class="input-field">
+			          <input id="search" type="search" required>
+			          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+			      
+			        </div>
+			      </form>
+			    </div>
+			  </nav>
+			</div>
+	
+		<nav class="nav-extended" style="height:70px; background-color:#0b1516">
+		<div  id="te" class="nav-wrapper" >
+			<ul>
+				<li class="waves-effect waves-light btn " style="color:white; background-color:#006e87">Home</li>
+				<li class="waves-effect waves-light btn " style="color:white; background-color:#0b1516">bbc</li>
+				<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516">cnn</li>
+				<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516">abc</li>
+				<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516">google</li>
+				<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516">LinkIn</li>
+				<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516">pbs</li></li>
+				<li class="waves-effect waves-light btn " style="color:white; background-color:#0b1516"><a style="color:black;background-color:white; text-decoration:none;" href="{{url_for('logout')}}">logout</a></li>
+
+			</ul>
+		</div>
+		</nav>
+		<div id="" style="width:100%; height:4%; background-color:white">
+			<h1 style="color:black; margin:0px; padding:20px">Welcome {{firstname}} {{lastname}} today is {{date}} </h1>
+		</div>
+		<div id="state" style="padding-top: 1px;background-image: url({{url_for('static', filename='images/.jpg')}}); background-color:#0b1516;text-align:center; width:100%; height:25%">
+			<div id="stt" style="padding-top: 5px;float:right;width:60%; height:100%; background-color:; text-align:center;margin:auto">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/2zmTwjP7r6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>		
+			<div id="stt" style="float:left;width:40%; height:100%; background-color:; text-align:center;margin:auto">	
+		
+			<h1 style="padding-top:11px;text-align:center;backgroud-color:blue; font-size:42px; font-weight:700;color:white">Best Blog  of  the  Day</h1>
+			<div id="" style="width:100%;margin:center; height:10%;background-color:">
+	          <ul>
+	    				<li class="waves-effect waves-light btn " style="color:white; background-color:#11354b"><a style="color:white; text-decoration:none;" href="#">Author</a></li>
+	    				<li class="waves-effect waves-light btn " style="color:white; background-color:#0b1516"><a style="color:white; text-decoration:none;" href="#">Title</a></li>
+	    				<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516"><a style="color:white; text-decoration:none;" href="#">Date</a></li>
+	    				<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516"><a style="color:white; text-decoration:none;" href="#">Likes</a></li>
+	    				<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516"><a style="color:white; text-decoration:none;" href="#">Dislikes</a></li>
+	
+	
+				    </ul>
+          
+        </div>
+			
+			<h2 style="color:white">It is self-evidence  that all men are created equal</h2>
+			<p id="constitution" style="color:#ffffff">
+				(CNN)President Donald Trump personally directed his longtime former attorney Michael Cohen to lie to Congress about the Moscow Trump Tower project, two federal law enforcement officials involved in an investigation of the matter told BuzzFeed.
+
+				The law enforcement officials told BuzzFeed that Trump directed Cohen to claim negotiations to build a Trump Tower in Moscow ended months earlier than they actually did. The law 	
+			</p>
+			</div>
+			
+			
+			</div>
+			<div  style="height:500px" class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center" >
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div style="background-image: url({{url_for('static', filename='images/wor.jpg')}});background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;" class="carousel-item red white-text" href="#one!">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p>
+    </div>
+    <div style="background-image: url({{url_for('static', filename='images/wa.jpg')}});background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;"class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div style="background-image: url({{url_for('static', filename='images/e.jpg')}});background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;"class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div style="background-image: url({{url_for('static', filename='images/01.jpg')}});background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;"class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+			<div id="" style="width:100%; height:4%; background-color:white">
+			</div>
+			<div id="middle"  style="width:100%;height:auto;padding: 2px; background-color:#0b1516">
+				{% for entry in blogs %}
+				<div id="sty" style="width:60%;height:90%; background-color:#0b1516;margin:auto;padding:8px">
+					<div id="" style="text-align:left">
+						<ul style="text-align:left"> 
+							<li class="waves-effect waves-light btn " style="color:white; background-color:green">likes 34</li>
+							<li class="waves-effect waves-light btn " style="color:white; background-color:red">dislikes 100</li>
+							<li class="waves-effect waves-light btn"  style="color:white; background-color:blue">comments 20</li></li>
+							<li class="waves-effect waves-light btn"  style="color:white; background-color:#0b1516">date</li>
+							
+						</ul>	
+					</div>
+					<div id="img" style="background-color:#0b1516; width:100%;height:40%">
+						<div id="mgs" style="text-align :left;float:right;width:50%;height:100%;background-color:#0b1516;">
+							<h1 style="margin:0px; font-size:25px; font-weight:200px; color:white">Author {{entry['author']}}</h1>
+							<br />
+							
+							<h1 style="margin:0px; font-size:25px; font-weight:200px; color:white">Title  {{entry['title']}}</h1>
+							<br />
+							
+							<h1 style="margin:0px; font-size:25px; font-weight:200px; color:white">email  {{entry['email']}}</h1>
+							<br />
+							
+							<h1 id="userprofile" style="margin:0px; font-size:25px; font-weight:200px; color:white"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a></h1>
+
+							
+						</div>
+						<!-- Modal Structure -->
+  
+						<div id="mg" style="float:left;width:45%;height:100%; background-color:#0b1516;border: solid lightgray;">
+							<img src="static/images/{{entry['img']}}" alt="Smiley face" height="100%" width="100%">
+
+						</div>
+						
+					</div>
+					<br />
+					<br />
+					<br />
+						<br />
+					<br />
+					<br />
+						<br />
+					<br />
+					<br />
+					<div id="stt" style="background-color:#0b1516;">
+						<h2 style="color:white;font-size: 30px;font-weight: 700;">It is self-evidence  that all men are created equal</h2>
+						<p id="constitution" style="color:white;font-size: 16px;font-weight: 300;text-align:left">
+							{{entry['description']}}
+						</p>
+					</div>
+				</div>
+				{% else %}
+				<li style="color:red; text-decoration:none">Unbelievable. there are no blogs</li>
+				{% endfor %}
+			</div>
+		
+		
+		
+
+		
+	    
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+</div>
+<script>
+window.addEventListener(`DOMContentLoaded` ,c.initialize);
+window.addEventListener(`DOMContentLoaded` ,mainPage.main);
+</script>
+<script> 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+
+  var instance = M.Modal.getInstance(true);
+ 
+</script>
+<script> 
+  var instance = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+  });
+
+  // Or with jQuery
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+</script>
+</body>
+</html>

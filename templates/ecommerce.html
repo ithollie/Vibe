@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finna</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/images.png') }}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.css')}}">
+  
+<link rel='stylesheet' media='screen and (min-width: 164px) and (max-width: 900px)' href="{{url_for('static',filename='css/convert.css')}}" />
+<script src="{{url_for('static', filename='javascript/system.js')}}"></script>
+<script src="{{url_for('static', filename='javascript/deskj.js')}}"></script>
+
+
+</head>
+<body>
+  
+	<div id="wrapper" style="top: 130px;">
+		<div style="background-color:#0c0a0bb0" id="modal1" class="modal modal-fixed-footer">
+		<div id="state" style="padding-top: 1px;background-image: url({{url_for('static', filename='images/.jpg')}}); background-color:#0c0a0bb0;text-align:center; width:100%; height:100%">
+			<h1 style="font-size:24px;color:white; font-weight:700;font-family: Times, Times New Roman, Georgia, serif;">Creat a comment</h1>
+			<p id="constitution" style="color:white;text-align:left">
+				(CNN)President Donald Trump personally directed his longtime former attorney Michael Cohen to lie to Congress about the Moscow Trump Tower project, two federal law enforcement officials involved in an investigation of the matter told BuzzFeed.
+
+				The law enforcement officials told BuzzFeed that Trump directed Cohen to claim negotiations to build a Trump Tower in Moscow ended months earlier than they actually did. The law 	
+			</p>
+				<div class="container" style="background-color:red">
+          <div class="row">
+            <div class="Absolute-Center is-Responsive">
+              
+              <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <form  id="loginForm"  action="{{url_for('login_process')}}" method="post" role="form">
+                  <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="title" style="font-size:24px;border-radius: 10px;padding-left:12px;background-color:white" class="form-control" type="text" name="title" placeholder="comment title" required/>
+                  </div>
+                  <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <textarea style="width: 433px;%;height:170px; border-radius: 10px;padding-left:12px;background-color:white" class="form-control" type="text" cols="80" name="comment" placeholder="Description" required=""></textarea>
+                  </div>
+                
+                  
+                  <div class="form-group">
+                    <button type="submit" class="btnlogin btn btn-def btn-block">Submit</button>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+</div>
+				
+			
+			
+			</div>
+
+
+
+  		</div>
+		<div id="header" style="background-image: url({{url_for('static', filename='images/social.jpg')}});background-color:">
+      <div  id="te" style="background-color:; padding-top: 4px;">
+  			<ul style="background-color:">
+  	    	 <li><a class="waves-effect waves-light btn "        style="text-transform: lowercase;color:white; text-decoration:none;background-color:green" href="{{url_for('login_route')}}"></a></li>
+  					<li><a class="waves-effect waves-light btn red"     style="text-transform: lowercase;color:white; text-decoration:none;background-color:yellow" href="{{url_for('register_route')}}"></a></li>
+  				  <li><a class="waves-effect waves-light btn black"   style="text-transform: lowercase;color:white; text-decoration:none;background-color:red" href="{{url_for('login_route')}}"></a></li>
+  			</ul>
+  		</div>
+  		<div id="full" style="text-align:center; opacity:0.8;top: 558px;width:100%;position:relative; height:20%; background-color:#313146">
+  		  <!--<h1 style="font-size:34px; font-weight:700">Be beautiful</h1>-->
+  		</div>
+		</div>
+	
+		<div id="" style="color:;width:100%; height:4%; background-color:#ffffff">
+			<!--<h1 style="color:black; margin:0px; padding:20px">Social Blog</h1>-->
+		</div>
+		<div id="titlelogin" style="position:relative;width:100%; height:10%;background-color:white">
+	  <div style="    position: absolute;float: left;width: 40%;height:9;margin: auto;padding-top:11px;background-color:green; font-size:32px; font-weight:700;color:black">Finna</div>
+	  <div id="fla" style="padding-left:0px; float:right;width:60%; background-color:red;color:black; margin:0px; height:100%">
+				<div id="w" style="height:60%; width:100%;background-color:green;color:black;padding:2px;margin:auto ">
+            <ul style="background-color:green">
+              <li style="font-family: Times, Times New Roman, Georgia, serif;color:black;font-size:calc(calc(0.1vw + 1vh) + 0px);  font-weight:700">Be beautiful</li>
+            </ul>
+			</div>
+	</div>
+		<div style="height:500px" class="carousel carousel-slider center">
+    
+    <div style="text-align: center; background-image: url(&quot;/static/images/germany.jpg&quot;); background-repeat: no-repeat; background-size: cover; background-position: center center; background-color: rgb(17, 53, 75) !important; z-index: -1; opacity: 1; visibility: visible; transform: translateX(0px) translateX(1135px) translateZ(0px);" class="carousel-item red white-text" href="#one!">
+      <div id="" style="text-align:center;padding-top:3px; width:100%;height:20%;background-color:#ffffff">
+              		<h1 style="border-radius: 25px;color:#907f27;font-size:calc(calc(2vw + 1vh) + 0px); font-weight: 700;">Friends and Family  in Germany</h1>
+
+      </div>
+    </div>
+    
+    <div style="background-image: url(&quot;/static/images/paris.jpg&quot;); background-repeat: no-repeat; background-size: cover; background-position: center center; transform: translateX(0px) translateX(-1135px) translateZ(0px); z-index: -1; opacity: 1; visibility: visible;" class="carousel-item amber white-text" href="#two!">
+      <div id="" style="text-align:center;padding-top:3px; width:100%;height:20%;background-color:#ffffff">
+      		<h1 style="color:Black; font-size:34px; font-weight: 700;">Paris</h1>
+      </div>
+     
+    
+    </div>
+    <div style="background-image: url(&quot;/static/images/korea.jpg&quot;); background-repeat: no-repeat; background-size: cover; background-position: center center; transform: translateX(0px) translateX(0px) translateX(0px) translateZ(0px); z-index: 0; opacity: 1; visibility: visible;" class="carousel-item green white-text active" href="#three!">
+      <div id="" style="text-align:center;padding-top:3px; width:100%;height:20%;background-color:#ffffff">
+      	  	<h1 style="color:Black; font-size:34px; font-weight: 700;">Korea</h1>
+      </div>
+    
+      </div>
+    
+     <ul class="indicators"><li class="indicator-item"></li><li class="indicator-item"></li><li class="indicator-item active"></li></ul></div>
+	   <div id="" style="text-align:center;padding-top:3px; width:100%;height:20%;background-color:#baba73">
+      	 <h1 style="color:Black; font-size:34px; font-weight: 700;">posts</h1>
+    </div>
+      
+		<div id="state" style="padding-top: 1px;background-image: url({{url_for('static', filename='images/.jpg')}}); background-color:white;text-align:center; width:100%; height:35%">
+			{% for item in items %}	
+    			<div id="stt" style="float:left;width:100%; height:100%; background-color:white; text-align:center;margin:auto">	
+    		  <div id="" style="width:100%;margin:center; height:5%;background-color:">
+    	          <ul>
+    	    				<li class="waves-effect waves-light btn " style="text-transform: lowercase;color:white; background-color:#11354b"><a style="color:white; text-decoration:none;" href="#">{{item['author']}}</a></li>
+    	    				<li class="waves-effect waves-light btn " style="text-transform: lowercase;color:white; background-color:#0b1516"><a style="color:white; text-decoration:none;" href="#">{{item['title']}}</a></li>
+    	    				<li class="waves-effect waves-light btn"  style="text-transform: lowercase;color:white; background-color:#0b1516"><a style="color:white; text-decoration:none;" href="#">{{item['email']}}</a></li>
+    	    				
+    	
+    				    </ul>
+              
+            </div>
+    			<div id="">
+    			   <img style="max-width: 100%;" class="responsive-img" src="static/uploads/{{item['img']}}" alt="Smiley face" height="100%" width="100%">
+    			</div>
+
+    			<div id="" style="width:100%;margin:center; height:5%;background-color:">
+    	          <ul>
+
+    	    				<li class="waves-effect waves-light btn"  style="    text-transform: lowercase;color:white; background-color:#0b1516"><a style="color:white; text-decoration:none;" href="#">likes {{item['likes']}}</a></li>
+    	    				<li class="waves-effect waves-light btn"  style="    text-transform: lowercase;color:white; background-color:#0b1516"><a style="color:white; text-decoration:none;" href="#">Dislikes {{item['dislikes']}}</a></li>
+    	
+    	
+    				    </ul>
+              
+            </div>
+    			
+    			<h2 style="color:black; font-size:30px; font-weight:200">It is self-evidence  that all men are created equal</h2>
+    			<p id="constitution" style="font-size: 20px;color:black;text-align:left">
+    				{{item['description']}}
+    			</p>
+			</div>
+			{% else %}
+       <li><em>Unbelievable.  No entries here so far</em>
+      {% endfor %}
+		</div>
+		<div id="wowo" style="background-image: url({{url_for('static', filename='images/city.jpg')}});background-repeat:no-repeat;background-size:cover;background-position:center;width:100%;height:50%;background-color:#ffffff">
+		
+		
+		<div id="" style="width:100%;height:10%;background-color:#faf4f4"></div>
+		
+		</div>
+		
+		<div id="de"  style="height:500px" class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center" >
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div style="background-image: url({{url_for('static', filename='images/wor.jpg')}});background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;" class="carousel-item red white-text" href="#one!">
+    </div>
+    <div style="background-image: url({{url_for('static', filename='images/wa.jpg')}});background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;"class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div style="background-image: url({{url_for('static', filename='images/e.jpg')}});background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;"class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div style="background-image: url({{url_for('static', filename='images/01.jpg')}});background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;"class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+			<div id="" style="width:100%; height:4%; background-color:white">
+			</div>
+
+</div>
+<footer style="position: relative;background-color:#313146" class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Mission Statement</h5>
+                <p class="grey-text text-lighten-4">we are beautiful  so be beautiful</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 Copyright   Finna inc
+           
+            </div>
+          </div>
+        </footer>
+<script>
+window.addEventListener(`DOMContentLoaded` ,c.initialize);
+window.addEventListener(`DOMContentLoaded` ,cs.initialize);
+</script>
+<script> 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+
+  var instance = M.Modal.getInstance(true);
+  
+  
+ 
+</script>
+<script> 
+
+
+
+ 
+  var instance = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+  });
+
+  // Or with jQuery
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+</script>
+
+
+</body>
+</html>

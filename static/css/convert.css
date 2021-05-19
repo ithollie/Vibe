@@ -1,0 +1,155 @@
+#wrapper{
+    width:100%;
+    padding: 1px;
+    top: 130px;
+
+}
+.sidenav .user-view .circle {
+    min-height: 40px;
+    min-width: 80px;
+}
+#titlelogin{
+    height: 15%;
+    height: 8%;
+}
+#why{
+    max-width: 100%;
+}
+
+.maing{
+    width: 444.6666666667%;
+}
+
+.sizeof{
+   min-width: 40%;
+}
+#titlelogin{
+    /*background-color:#215775;*/
+}
+img{
+     min-width: 10%;
+}
+a{
+    font-size: calc(calc(2vw + 1vh) + 0px);
+}
+.constitution{
+  /*font-size:calc(calc(0.9vw + 1vh) + 0px);*/
+  background-color:#fcfbfb;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color:black;
+  padding-left:1px;
+  padding-right:1px;
+  font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.66667;
+  
+}
+#header{
+    width:calc(calc(100vw + 1vh) + 0px);
+    left:0%;
+}
+#videoOne{
+   clear:both;
+   padding-left: 4px;
+   float:left;
+   width: 100%;
+   height: 5%;
+   padding-bottom: 12px;
+   background: white
+}
+#header{
+  color:white;
+  padding:0px;
+  height:60vh;
+  margin:0px;
+  z-index: 10000;
+  width:calc(calc(100vw + 1vh) + 0px);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+.vTwo{
+   padding-bottom: 12px;
+   clear:both;
+   padding-left: 4px;
+   float: left;
+   width: 100%;
+   height: 5%;
+   background:;
+}
+#mag{
+  height:400px;  
+}
+
+.VOne{
+   padding-bottom: 12px;
+   padding-left: 4px;
+   float: left;
+   width: 100%;
+   height: 5%;
+   background:#fcfbfb;
+}
+h2{
+    font-size: 23px;
+    text-align: center;
+}
+#tone{
+    height:2%;
+}
+#tone1{
+    visibility: hidden;
+}
+.topnav{
+  top:0px;
+  position: relative;
+  width:100%;
+  background-color:;
+  visibility:visible;
+  margin:auto
+}
+#titleText{
+  font-size:40px;
+  font-weight:700;
+}
+#titlelogin{
+   position: relative;
+   z-index: 10000;
+   /*top:441px;*/
+   width:100%; height:10%;
+   background-color:;
+}
+#te{
+    width:calc(calc(100vw + 1vh) + 0px);
+    /*background-color:#000000;*/
+    /*opacity: 0.7;*/
+    height:1.4%;
+}
+#g{
+    background-color:;
+}
+#liste{
+    width:100%;
+    background-color:;
+}
+#VOnediv{
+  width:100%;height:15%;background-color:;    padding-top: 1px
+}
+#VTwodiv{
+  width:100%;height:15%;background-color:;    padding-top: 1px
+}
+#listp{
+    width:100%;
+    clear:both;
+    height:100%;
+    display:none;
+    background-color:;
+}
+#tone{
+    visibility: hidden;
+}
+#listshow{
+   display: block;
+   height:24%;
+   background-color:;
+}
