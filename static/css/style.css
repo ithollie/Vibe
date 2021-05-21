@@ -23,6 +23,10 @@ body{
   visibility:visible;
 
 }
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
 .btn{
   #padding:0px;
 }
@@ -150,7 +154,8 @@ ruled {
   margin:auto;
   padding:2px;
   top: 92px;
-
+  animation-name: example;
+  animation-duration: 5s;
 }
 #constitution{
   font-size:calc(calc(0.9vw + 1vh) + 0px);color:black;text-align:left
