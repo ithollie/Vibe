@@ -658,7 +658,7 @@ def register_process():
          
             if  Users.get_by_email(request.form['email'].lower()) != True and  reg.PasswordMatch(password, confirm) == True and reg.notEmpty() == True:
                 mail =  Mail("boysthollie@gmail.com", email)
-                mail.sendMail()
+                #mail.sendMail()
                 f.save(os.path.join(os.getcwd() +'/static/uploads/reg', filename))
                 print(reg.notEmpty())
                 Users.registration(request.form['firstname'], request.form['lastname'] , request.form['email'], request.form['password'], request.files['file'].filename, image=image)

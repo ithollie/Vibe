@@ -11,12 +11,17 @@ class Database(object):
     @staticmethod
     def initialize():
             
-            username = urllib.parse.quote_plus('hawaibrahB1a1')
-            password = urllib.parse.quote_plus('hawaibrahB1a1')
+            username = urllib.parse.quote_plus('ithollie')
+            password = urllib.parse.quote_plus('hawaibrahB1a1@@')
             
-            #cli = pymongo.MongoClient("mongodb://%s:%s@cluster0.scnlr.mongodb.net/vibeDatabase?retryWrites=true&w=majority" % (username, password))
-            client = pymongo.MongoClient("mongodb+srv://%s:%s@cluster0.scnlr.mongodb.net/vibeDatabase?retryWrites=true&w=majority" % (username, password))
-            Database.DATABASE = client['vibeDatabase']
+
+            client = pymongo.MongoClient("mongodb+srv://%s:%s@cluster0.jdn8r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" % (username, password))
+            #db = client.test
+
+            #cli = pymongo.MongoClient("mongodb://%s:%s@cluster0.scnlr.mongodb.net/vibe?retryWrites=true&w=majority" % (username, password))
+            
+            #client = pymongo.MongoClient("mongodb+srv://%s:%s@cluster0.scnlr.mongodb.net/vibe?retryWrites=true&w=majority" % (username, password))
+            Database.DATABASE = client['vibe']
             
     @staticmethod
     def connectUrl(uri_connection, online_connection):
