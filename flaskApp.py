@@ -720,6 +720,8 @@ def login_process():
       else:
            
            error = "You are not a valiable  user"
+           logform =  LoginForm()
+
            flash("There is a problem were you are not successfully logged in")
            render_template('login.html', title='login', logform=logform, error=error)
    flash('There is a problem were you are not successfully logged in')
