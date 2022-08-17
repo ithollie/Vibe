@@ -41,8 +41,10 @@ class Users(object):
 		 file  =  os.getcwd() + '/static/uploads'    
 		 for  blog in   blogs:
 		 	for file in os.listdir(file):
-		 		if file == blog['img']:
-		 			return False
+					if file == blog['img']:
+		 				return False
+					else:
+						return True
 	@classmethod
 	def get_by_email(cls,email):
 			data = Database.find_one(UserConstants.COLLECTION, {"email":email})
@@ -58,9 +60,13 @@ class Users(object):
 		
 	@staticmethod
 	def  find(postObject,length):
-		 
-		 for items in  range(0, length):
-		 	return  postObject[items]
+		array  = []
+		for items in postObject:
+		 	array.append(postObject)
+
+		return  array
+		
+
 	@staticmethod
 	def  requests(postObject,length):
 		 for items in  range(0, length):
@@ -69,7 +75,7 @@ class Users(object):
 	@staticmethod
 	def friends(postObject, length):
 		accept = 0
-		for i  in range(0, length):
+		for i  in postObject:
 			if postObject[i]['accept'] == 1:
 				accept = accept + 1
 		return  accept
@@ -83,7 +89,7 @@ class Users(object):
 	@staticmethod
 	def messages(postObject, length):
 		accept = 0
-		for i  in range(0, length):
+		for i  in postObject:
 			if postObject[i]['accept'] == 1:
 				accept = accept + 1
 		return  accept

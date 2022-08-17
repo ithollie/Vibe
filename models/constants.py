@@ -1,2 +1,2 @@
-COLLECTION="user"
+COLLECTION="users"
 SONGS= "song"

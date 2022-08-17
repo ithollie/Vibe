@@ -4,8 +4,6 @@ from RegisterForm.RegisterForm import RegForm as Form
 from hashlib import md5
 import os
 import datetime
-import uuid
-import
 from werkzeug.utils import secure_filename
 from models.requests.Request import  Request
 from models import constants as UserConstants
@@ -28,7 +26,7 @@ from common.Utils import utils
 from common.Utils import utils
 from common.database import Database
 from bson.objectid import ObjectId
-from  na
+
 app = Flask(__name__)
 UPLOAD_FOLDER = os.path.basename('static') + "/uploads"
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
@@ -177,7 +175,7 @@ def insert_dislikes(email,titleblog):
 def create_blog():
     message = "You  are not a valiable user"
     if request.cookies.get('login_email') is not None:
-	       return render_template('blogform.html')
+	    return render_template('blogform.html')
     else:
         return redirect(url_for('login_route',message=message))
         
@@ -389,7 +387,7 @@ def blog():
         print(Users.blogExists(request.form['title']))
     
         if Users.blogExists(request.form['title'])  == False:
-            userImage =  Database.find_one("user", {"firstname":author})['image']
+            userImage =  Database.find_one("users", {"firstname":author})['image']
             cookie = request.cookies.get('login_email')
             person = Users.get_by_email(cookie)
             blog = Blogs(author=author,titleblog=titleblog,description=description,email=email,filename=filename, userImage=userImage)
@@ -457,11 +455,12 @@ def activated():
 		userEmail =  request.form['email']
 		active = activate_account(userEmail)
 		databaseEmail = active.getEmail(userEmail)
-		if user_password and userEmail:
 
-			active.Update(User_utils.check_hash_password(request.form['password'],databaseEmail['password']))
+		if user_password and userEmail  and databaseEmail ==  userEmail:
+
+			active.update(User_utils.check_hash_password(request.form['password'],databaseEmail['password']))
 		else:
-			return False
+			flash("Thank you for activating you account")
 	flash("Thank you for activating you account")
 	return render_template("login.html", loginform=loginform)
 
@@ -487,6 +486,10 @@ def allowed_file(filename):
 def java():
     return render_template('java.html')
     
+@app.route('/activate')
+def activate():
+    return render_template("activate.html")
+
 @app.route('/python')
 def python():
     return render_template('python.html')
@@ -658,7 +661,7 @@ def register_process():
          
             if  Users.get_by_email(request.form['email'].lower()) != True and  reg.PasswordMatch(password, confirm) == True and reg.notEmpty() == True:
                 mail =  Mail("boysthollie@gmail.com", email)
-                #mail.sendMail()
+                mail.sendMail()
                 f.save(os.path.join(os.getcwd() +'/static/uploads/reg', filename))
                 print(reg.notEmpty())
                 Users.registration(request.form['firstname'], request.form['lastname'] , request.form['email'], request.form['password'], request.files['file'].filename, image=image)
@@ -745,26 +748,29 @@ def welcome():
             
         date = datetime.datetime.utcnow()
         item = Database.find_one(UserConstants.COLLECTION,{"email":request.cookies.get('login_email')})
+
         if item['email'] == request.cookies.get('login_email') and item['email'] != "":
+
             flash('Login is a success' + " "+ 'welcome' + " "+ request.cookies.get('login_email'))
             newArray   = []
 
-            
             blogs      = Database.find("blogs", {})
-            youtube    = Database.find_one('user', {"email":request.cookies.get('login_email')})['youtube']
+            youtube    = Database.find_one('users', {"email":request.cookies.get('login_email')})['youtube']
             
             postsu     = Database.find("blogs", {})
-            postUsers  = Users.find(Database.find("blogs", {}),Database.find("blogs", {}).count())
+
+            postUsers =  Database.find("blogs", {})
+
+            length     =  Database.find("requests"+request.cookies.get('login_email'), {})
             
-            length     = Database.find("requests"+request.cookies.get('login_email'), {}).count()
+            messageRe   = Database.find("requests"+request.cookies.get('login_email'), {})
             
-            messageRe   = Database.find("requests"+request.cookies.get('login_email'), {}).count()
-            
-            requests   = Database.find("requests"+request.cookies.get('login_email'), {'accept':0}).count()
+            requests   =  Users.find("requests"+request.cookies.get('login_email'), {'accept':0})
+
             friends    = Users.friends( Database.find("requests"+request.cookies.get('login_email'), {}) ,length)
-            acccepted  = Database.find("requests"+request.cookies.get('login_email'), {'accept':1}).count()
+            acccepted  = Database.find("requests"+request.cookies.get('login_email'), {'accept':1})
             
-            messages   = Users.messages( Database.find("requests"+request.cookies.get('login_email'),{}) ,length)
+            messages   = Users.messages(Database.find("requests"+request.cookies.get('login_email'),{}) ,length)
             
             userblog   = Users.blogs( "blogs" ,item['email'])
             email      = request.cookies.get('login_email') 

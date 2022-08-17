@@ -39,7 +39,7 @@ class Mail(object):
           <body>
             <p>Hi,<br>
                How are you?<br>
-               <a href="http://127.0.0.1:9000/activate">click here to activate  you account</a> 
+               <a href="http://127.0.0.1:8000/activate">click here to activate  you account</a> 
                has many great tutorials.
             </p>
           </body>
@@ -59,7 +59,7 @@ class Mail(object):
         #context = ssl.create_default_context()
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("boysthollie@gmail.com", "hawaibrahB1a1@$$$$@@@@####")
+        server.login("newnurdscoding@gmail.com", "sscavovdlpdomute")
         server.sendmail(self.sender_email, self.receiver_email, message.as_string())
         server.quit()
         
